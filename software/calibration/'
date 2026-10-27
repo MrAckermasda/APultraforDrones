@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+source /home/ubuntu/.zshrc
+python3 /home/ubuntu/software/calibration/calibration.py 
+sleep 5& 
+python3 /home/ubuntu/software/calibration/main.py

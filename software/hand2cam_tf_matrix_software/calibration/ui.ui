@@ -1,0 +1,1647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1370</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>calibration 1.0</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1370</width>
+     <height>750</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1370</width>
+     <height>750</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #EBEBEB;</string>
+   </property>
+   <widget class="QWidget" name="widget_8" native="true">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>500</y>
+      <width>71</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255,);
+border-radius:6px;</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_delete">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>32</y>
+       <width>50</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}</string>
+     </property>
+     <property name="text">
+      <string>删除</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_add">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>50</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}</string>
+     </property>
+     <property name="text">
+      <string>增加</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_open">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>86</y>
+       <width>50</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}</string>
+     </property>
+     <property name="text">
+      <string>打开</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_save">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>113</y>
+       <width>50</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}</string>
+     </property>
+     <property name="text">
+      <string>保存</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_update">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>59</y>
+       <width>50</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}</string>
+     </property>
+     <property name="text">
+      <string>更新</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_12" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>5</y>
+      <width>671</width>
+      <height>490</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 6px;</string>
+    </property>
+    <widget class="QLabel" name="label_display">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>5</y>
+       <width>640</width>
+       <height>480</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(80, 80, 80);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>5</y>
+      <width>671</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255,);
+border-radius:6px;</string>
+    </property>
+    <widget class="QLabel" name="label_servo1">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>10</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>500</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_servo1">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>30</y>
+       <width>581</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider{
+border-radius: 5px;
+}
+
+QSlider::groove:horizontal {
+background: transparent;
+height:15px;
+border-radius: 5px;
+}
+
+QSlider::handle:horizontal{
+width: 28px;
+height:28px;
+margin-top: -7px;
+margin-bottom: -7px;
+border-radius:14px;
+background: rgba(240, 240, 240);
+}
+QSlider::add-page{/*还没有滑上去的地方*/
+    background: #575757;
+}
+QSlider::sub-page{/*已经划过的从地方*/                            
+    background: #FF9600;
+}</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>700</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>500</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_servo2">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>100</y>
+       <width>581</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider{
+border-radius: 5px;
+}
+
+QSlider::groove:horizontal {
+background: transparent;
+height:15px;
+border-radius: 5px;
+}
+
+QSlider::handle:horizontal{
+width: 28px;
+height:28px;
+margin-top: -7px;
+margin-bottom: -7px;
+border-radius:14px;
+background: rgba(240, 240, 240);
+}
+QSlider::add-page{/*还没有滑上去的地方*/
+    background: #575757;
+}
+QSlider::sub-page{/*已经划过的从地方*/                            
+    background: #FF9600;
+}</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>500</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_servo2">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>80</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>500</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>37</y>
+       <width>30</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>ID 1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>107</y>
+       <width>30</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>ID 2</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_servo6">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>360</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>500</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_servo3">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>150</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>500</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_servo5">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>290</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>500</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_servo5">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>310</y>
+       <width>581</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider{
+border-radius: 5px;
+}
+
+QSlider::groove:horizontal {
+background: transparent;
+height:15px;
+border-radius: 5px;
+}
+
+QSlider::handle:horizontal{
+width: 28px;
+height:28px;
+margin-top: -7px;
+margin-bottom: -7px;
+border-radius:14px;
+background: rgba(240, 240, 240);
+}
+QSlider::add-page{/*还没有滑上去的地方*/
+    background: #575757;
+}
+QSlider::sub-page{/*已经划过的从地方*/                            
+    background: #FF9600;
+}</string>
+     </property>
+     <property name="minimum">
+      <number>125</number>
+     </property>
+     <property name="maximum">
+      <number>875</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>500</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_servo3">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>170</y>
+       <width>581</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider{
+border-radius: 5px;
+}
+
+QSlider::groove:horizontal {
+background: transparent;
+height:15px;
+border-radius: 5px;
+}
+
+QSlider::handle:horizontal{
+width: 28px;
+height:28px;
+margin-top: -7px;
+margin-bottom: -7px;
+border-radius:14px;
+background: rgba(240, 240, 240);
+}
+QSlider::add-page{/*还没有滑上去的地方*/
+    background: #575757;
+}
+QSlider::sub-page{/*已经划过的从地方*/                            
+    background: #FF9600;
+}</string>
+     </property>
+     <property name="minimum">
+      <number>50</number>
+     </property>
+     <property name="maximum">
+      <number>950</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>500</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_servo6">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>380</y>
+       <width>581</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider{
+border-radius: 5px;
+}
+
+QSlider::groove:horizontal {
+background: transparent;
+height:15px;
+border-radius: 5px;
+}
+
+QSlider::handle:horizontal{
+width: 28px;
+height:28px;
+margin-top: -7px;
+margin-bottom: -7px;
+border-radius:14px;
+background: rgba(240, 240, 240);
+}
+QSlider::add-page{/*还没有滑上去的地方*/
+    background: #575757;
+}
+QSlider::sub-page{/*已经划过的从地方*/                            
+    background: #FF9600;
+}</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>500</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_servo4">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>240</y>
+       <width>581</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider{
+border-radius: 5px;
+}
+
+QSlider::groove:horizontal {
+background: transparent;
+height:15px;
+border-radius: 5px;
+}
+
+QSlider::handle:horizontal{
+width: 28px;
+height:28px;
+margin-top: -7px;
+margin-bottom: -7px;
+border-radius:14px;
+background: rgba(240, 240, 240);
+}
+QSlider::add-page{/*还没有滑上去的地方*/
+    background: #575757;
+}
+QSlider::sub-page{/*已经划过的从地方*/                            
+    background: #FF9600;
+}</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>500</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_servo4">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>220</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>500</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>177</y>
+       <width>30</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>ID 3</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>247</y>
+       <width>30</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>ID 4</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>317</y>
+       <width>30</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>ID 5</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>387</y>
+       <width>30</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>ID 6</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>500</y>
+      <width>591</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:1px solid #242424;
+border-color: rgb(200, 200, 200);
+</string>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustIgnored</enum>
+    </property>
+    <property name="autoScrollMargin">
+     <number>16</number>
+    </property>
+    <property name="textElideMode">
+     <enum>Qt::ElideMiddle</enum>
+    </property>
+    <property name="rowCount">
+     <number>0</number>
+    </property>
+    <property name="columnCount">
+     <number>8</number>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>71</number>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>20</number>
+    </attribute>
+    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>22</number>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>22</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>编号</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>类型</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>X</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Y</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Z</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Roll</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Pitch</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Yaw</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </column>
+   </widget>
+   <widget class="QWidget" name="widget_14" native="true">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>555</y>
+      <width>671</width>
+      <height>85</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255,);
+border-radius:6px;</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_delete_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>90</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(255, 255, 255);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}</string>
+     </property>
+     <property name="text">
+      <string>删除</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_roi">
+     <property name="geometry">
+      <rect>
+       <x>485</x>
+       <y>17</y>
+       <width>80</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}
+</string>
+     </property>
+     <property name="text">
+      <string>ROI校准</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_read_dev">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>17</y>
+       <width>80</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}</string>
+     </property>
+     <property name="text">
+      <string>读取偏差</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_save_dev">
+     <property name="geometry">
+      <rect>
+       <x>105</x>
+       <y>17</y>
+       <width>80</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}</string>
+     </property>
+     <property name="text">
+      <string>保存偏差</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_calibrate">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>17</y>
+       <width>80</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}
+</string>
+     </property>
+     <property name="text">
+      <string>手眼标定</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_reset">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>17</y>
+       <width>80</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}</string>
+     </property>
+     <property name="text">
+      <string>回中</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_init">
+     <property name="geometry">
+      <rect>
+       <x>295</x>
+       <y>17</y>
+       <width>80</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}</string>
+     </property>
+     <property name="text">
+      <string>复位</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_update_config">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>15</y>
+       <width>80</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Han Sans CN</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:2px;
+background-color: #FFA500;
+color: rgb(0, 0, 0);
+}
+QPushButton:pressed{
+border:2px solid rgb(255, 102, 0, 0);}
+</string>
+     </property>
+     <property name="text">
+      <string>更新参数</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_7" native="true">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>430</y>
+      <width>671</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255,);
+border-radius:6px;</string>
+    </property>
+    <widget class="QWidget" name="widget_5" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>200</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:  #FFA500;
+border-radius:6px;</string>
+     </property>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>X(m)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_x">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>10</y>
+        <width>120</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_6" native="true">
+     <property name="geometry">
+      <rect>
+       <x>235</x>
+       <y>10</y>
+       <width>200</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:  #FFA500;
+border-radius:6px;</string>
+     </property>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Y(m)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_y">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>10</y>
+        <width>120</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_9" native="true">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>10</y>
+       <width>200</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:  #FFA500;
+border-radius:6px;</string>
+     </property>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Z(m)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_z">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>10</y>
+        <width>120</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_10" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>200</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:  #FFA500;
+border-radius:6px;</string>
+     </property>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>50</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Roll°</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_roll">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>10</y>
+        <width>120</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_11" native="true">
+     <property name="geometry">
+      <rect>
+       <x>235</x>
+       <y>70</y>
+       <width>200</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:  #FFA500;
+border-radius:6px;</string>
+     </property>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>10</y>
+        <width>50</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Pitch°</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_pitch">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>10</y>
+        <width>120</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_13" native="true">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>70</y>
+       <width>200</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:  #FFA500;
+border-radius:6px;</string>
+     </property>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>50</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Yaw°</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_yaw">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>10</y>
+        <width>120</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Han Sans CN</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

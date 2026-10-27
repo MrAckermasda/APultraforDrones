@@ -1,0 +1,236 @@
+#!/usr/bin/env python3
+import sys
+import time
+
+class BusServoControl:
+    def __init__(self, board, time_out=30):
+        self.board = board
+        self.time_out = time_out
+
+    def setBusServoID(self, oldid, newid):
+        """
+        Configure servo id number, default is 1 (配置舵机id号, 出厂默认为1)
+        :param oldid: Original id, default is 1 (原来的id， 出厂默认为1)
+        :param newid: New id (新的id)
+        """
+        self.board.bus_servo_set_id(oldid, newid)
+
+    def getBusServoID(self, servo_id=None):
+        """
+        Read the id of the serial servo (读取串口舵机id)
+        :param id: Default is empty (默认为空)
+        :return: Return the servo id (返回舵机id)
+        """
+        count = 0 
+        while True:
+            if servo_id is None:
+                res = self.board.bus_servo_read_id()
+            else:
+                res = self.board.bus_servo_read_id(servo_id)
+            count += 1
+            if res is not None:
+                return res
+            if count > self.time_out:
+                return None
+            time.sleep(0.01)
+
+    def setBusServoPulse(self, servo_id, position, duration):
+        """
+        Drive the serial servo to a specified position (驱动串口舵机转到指定位置)
+        :param servo_id: Id of the servo to be driven (要驱动的舵机id)
+        :position: Position (位置)
+        :duration: Time required for rotation (转动需要的时间)
+        """
+        position = 0 if position < 0 else position
+        position = 1000 if position > 1000 else position
+        duration = 0 if duration < 0 else duration
+        duration = 30000 if duration > 30000 else duration
+        
+        self.board.bus_servo_set_position(duration/1000, [[servo_id, position]])
+
+    def getBusServoPulse(self, servo_id):
+        '''
+        Read the current position of the servo (读取舵机当前位置)
+        :param servo_id:
+        :return:
+        '''
+        count = 0 
+        while True:
+            res = self.board.bus_servo_read_position(servo_id)
+            count += 1
+            if res is not None:
+                return res
+            if count > self.time_out:
+                return None
+            time.sleep(0.01)
+
+    def stopBusServo(self, servo_id):
+        '''
+        Stop the servo from running (停止舵机运行)
+        :param servo_id:
+        :return:
+        '''
+        self.board.bus_servo_stop(servo_id)
+
+    def setBusServoDeviation(self, servo_id, offset=0):
+        """
+        Adjust deviation (调整偏差)
+        :param servo_id: Servo id (舵机id)
+        :param offset: Deviation (偏差)
+        """
+        self.board.bus_servo_set_offset(servo_id, offset)
+
+    def saveBusServoDeviation(self, servo_id):
+        """
+        Save deviation (保存偏差)
+        :param servo_id: Servo id (舵机id)
+        """
+        self.board.bus_servo_save_offset(servo_id)
+
+    def getBusServoDeviation(self, servo_id):
+        '''
+        Read the deviation value (读取偏差值)
+        :param servo_id: Servo number (舵机号)
+        :return:
+        '''
+        # Send command to read deviation (发送读取偏差指令)
+        count = 0
+        while True:
+            res = self.board.bus_servo_read_offset(servo_id)
+            count += 1
+            if res is not None:
+                return res
+            if count > self.time_out:
+                return None
+            time.sleep(0.01)
+
+    def setBusServoAngleLimit(self, servo_id, low, high):
+        '''
+        Set the servo rotation range (设置舵机转动范围)
+        :param servo_id:
+        :param low:
+        :param high:
+        :return:
+        '''
+        self.board.bus_servo_set_angle_limit(servo_id, [low, high])
+
+    def getBusServoAngleLimit(self, servo_id):
+        '''
+        Read the servo rotation range (读取舵机转动范围)
+        :param servo_id:
+        :return: Return a tuple 0: low  1: high (返回元祖 0： 低位  1： 高位)
+        '''
+        count = 0
+        while True:
+            res = self.board.bus_servo_read_angle_limit(servo_id)
+            count += 1
+            if res is not None:
+                return res
+            if count > self.time_out:
+                return None
+            time.sleep(0.01)
+
+    def setBusServoVinLimit(self, servo_id, low, high):
+        '''
+        Set the servo voltage range (设置舵机电压范围)
+        :param servo_id:
+        :param low:
+        :param high:
+        :return:
+        '''
+        self.board.bus_servo_set_vin_limit(servo_id, [low, high])
+
+    def getBusServoVinLimit(self, servo_id):
+        '''
+        Read the servo voltage range (读取舵机电压范围)
+        :param servo_id:
+        :return: Return a tuple 0: low  1: high (返回元祖 0： 低位  1： 高位)
+        '''
+        count = 0
+        while True:
+            res = self.board.bus_servo_read_vin_limit(servo_id)
+            count += 1
+            if res is not None:
+                return res
+            if count > self.time_out:
+                return None
+            time.sleep(0.01)
+
+    def setBusServoMaxTemp(self, servo_id, m_temp):
+        '''
+        Set the servo maximum temperature alarm (设置舵机最高温度报警)
+        :param servo_id:
+        :param m_temp:
+        :return:
+        '''
+        self.board.bus_servo_set_temp_limit(servo_id, m_temp)
+
+    def getBusServoTempLimit(self, servo_id):
+        '''
+        Read the servo temperature alarm range (读取舵机温度报警范围)
+        :param servo_id:
+        :return:
+        '''
+        count = 0
+        while True:
+            res = self.board.bus_servo_read_temp_limit(servo_id)
+            count += 1
+            if res is not None:
+                return res
+            if count > self.time_out:
+                return None
+            time.sleep(0.01)
+
+    def getBusServoTemp(self, servo_id):
+        '''
+        Read the servo temperature (读取舵机温度)
+        :param servo_id:
+        :return:
+        '''
+        count = 0
+        while True:
+            res = self.board.bus_servo_read_temp(servo_id)
+            count += 1
+            if res is not None:
+                return res
+            if count > self.time_out:
+                return None
+            time.sleep(0.01)
+
+    def getBusServoVin(self, servo_id):
+        '''
+        Read the servo voltage (读取舵机电压)
+        :param servo_id:
+        :return:
+        '''
+        count = 0
+        while True:
+            res = self.board.bus_servo_read_vin(servo_id)
+            count += 1
+            if res is not None:
+                return res
+            if count > self.time_out:
+                return None
+            time.sleep(0.01)
+
+    def restBusServoPulse(self, oldid):
+        # Servo reset deviation and P value to midpoint (500) (舵机清零偏差和P值中位（500）)
+        setBusServoDeviation(oldid, 0)    # Reset deviation (清零偏差)
+        time.sleep(0.1)
+        setBusServoPulse(oldid, 500, 100)
+
+##Power off(掉电)
+    def unloadBusServo(self, servo_id):
+        self.board.bus_servo_enable_torque(servo_id, 1)
+
+## Read whether power off(读取是否掉电)
+    def getBusServoLoadStatus(self, servo_id):
+        count = 0
+        while True:
+            res = self.board.bus_servo_read_torque_state(servo_id)
+            count += 1
+            if res is not None:
+                return res
+            if count > self.time_out:
+                return None
+            time.sleep(0.01)

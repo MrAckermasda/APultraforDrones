@@ -1,0 +1,2 @@
+# Original controller USB ID; confirm with udevadm before installation.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", GROUP="dialout", MODE="0660", SYMLINK+="rrc", ENV{ID_MM_PORT_IGNORE}="1"

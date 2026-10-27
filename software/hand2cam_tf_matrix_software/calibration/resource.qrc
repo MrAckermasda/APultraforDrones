@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="control_ui">
+    <file>resource/运行.png</file>
+  </qresource>
+</RCC>

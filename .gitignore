@@ -1,0 +1,83 @@
+# ROS 2 / colcon build products
+/build/
+/install/
+/log/
+.colcon/
+**/build/
+**/install/
+**/log/
+
+# Python artifacts and test caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local IDE / OS state
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local migration backups, runtime logs and generated telemetry
+.migration-backup/
+.aws/
+.codex/
+.ssh/
+.venv/
+venv/
+*.log
+*.jsonl
+
+# Per-machine configuration and credentials; commit the documented example instead
+config/pc.env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Model weights, inference engines and generated training output (keep source/config)
+*.pt
+*.pth
+*.onnx
+*.engine
+*.caffemodel
+*.wts
+*.jit
+runs/
+**/runs/
+
+# Platform-specific compiled libraries/binaries. Rebuild from source for target platform.
+*.so
+*.so.*
+*.a
+*.lib
+*.o
+*.obj
+*.crf
+*.d
+*.axf
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.lnp
+*.dep
+*.uvguix.*
+*.iex
+*.cache
+
+# Retain vendor toolchain libraries and their licenses; these are build inputs.
+!ArmPiUltra/Drivers/CMSIS/Lib/**/*.lib
+!ArmPiUltra/Drivers/CMSIS/Lib/**/*.a
+
+# Runtime audio, captured images and calibration data
+**/recording.wav
+**/tts_audio.wav

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Arm
+Comment=Arm Program
+Exec=bash "/home/lyl/ros2_ws/software/armpi_ultra_control/arm.sh"
+Terminal=false
+Type=Application
+Categories=Development;
+StartupNotify=true
+Icon=/home/lyl/ros2_ws/software/armpi_ultra_control/resources/arm.ico

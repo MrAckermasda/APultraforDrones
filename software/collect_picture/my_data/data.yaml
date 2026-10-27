@@ -1,0 +1,6 @@
+names:
+- turn_around
+nc: 1
+train: ImageSets/train.txt
+val: ImageSets/val.txt
+path: /home/lyl/ros2_ws/software/collect_picture/my_data

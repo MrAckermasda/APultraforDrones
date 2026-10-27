@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=JetArm Tweak Tool
+Comment=JetArm Correction Tool
+Exec=bash "/home/lyl/ros2_ws/software/calibration/tool.sh"
+Terminal=false
+Categories=Development;
+StartupNotify=true
+Icon=/home/lyl/ros2_ws/software/calibration/icon.png
+Name[en_HK]=JetArm位置微调工具

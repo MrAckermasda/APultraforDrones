@@ -1,0 +1,101 @@
+{
+  "implementation": "experimental Python Modified DH + geometric IK",
+  "hardware_verified": false,
+  "assumptions": [
+    "tool offset along final +Z",
+    "pitch measured in q1 radial plane",
+    "no collision/trajectory checks; no vendor equivalence claim"
+  ],
+  "chassis": "None",
+  "geometry_m": {
+    "base_height": 0.094605,
+    "upper_arm": 0.10048,
+    "forearm": 0.1,
+    "wrist_length": 0.055,
+    "gripper_length": 0.115
+  },
+  "servo_ids": [
+    6,
+    5,
+    4,
+    3,
+    2
+  ],
+  "input_angles_deg": [
+    0.0,
+    -114.00000000000001,
+    78.0,
+    3.5999999999999948,
+    0.0
+  ],
+  "fk": {
+    "position_m": [
+      0.13112335668766778,
+      9.978677735213105e-18,
+      0.10164082547783329
+    ],
+    "quaternion_xyzw": [
+      -0.960293685676943,
+      -0.0,
+      -0.2789911060392292,
+      5.880102942028412e-17
+    ],
+    "rotation": [
+      [
+        0.844327925502015,
+        3.280992846842067e-17,
+        0.5358267949789968
+      ],
+      [
+        -3.2809928468420677e-17,
+        -1.0,
+        1.1293251452720604e-16
+      ],
+      [
+        0.5358267949789968,
+        -1.1293251452720604e-16,
+        -0.844327925502015
+      ]
+    ],
+    "geometric_pitch_deg": -57.59999999999998
+  },
+  "ik_request": {
+    "position_m": [
+      0.13112335668766778,
+      9.978677735213105e-18,
+      0.10164082547783329
+    ],
+    "pitch_deg": -57.59999999999998,
+    "wrist_angle_deg": 0.0
+  },
+  "solution_count": 1,
+  "solutions": [
+    {
+      "angles_rad": [
+        7.610145123863813e-17,
+        -1.9896753472735362,
+        1.3613568165555778,
+        0.06283185307179529,
+        0.0
+      ],
+      "pitch_deg": -57.59999999999998,
+      "position_error_m": 9.978677735213105e-18,
+      "pitch_error_deg": 0.0,
+      "base_axis_singular": false,
+      "angles_deg": [
+        4.360291970794596e-15,
+        -114.00000000000003,
+        78.00000000000004,
+        3.599999999999967,
+        0.0
+      ],
+      "float_pulses": [
+        500.0,
+        600.0000000000001,
+        825.0000000000002,
+        110.00000000000011,
+        500.0
+      ]
+    }
+  ]
+}

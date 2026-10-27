@@ -1,0 +1,8 @@
+./../JPEGImages/image_8.jpg
+./../JPEGImages/image_3.jpg
+./../JPEGImages/image_7.jpg
+./../JPEGImages/image_1.jpg
+./../JPEGImages/image_6.jpg
+./../JPEGImages/image_2.jpg
+./../JPEGImages/image_5.jpg
+./../JPEGImages/image_10.jpg

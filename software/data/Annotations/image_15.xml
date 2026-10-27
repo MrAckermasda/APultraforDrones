@@ -1,0 +1,27 @@
+<annotation verified="no">
+  <folder>JPEGImages</folder>
+  <filename>image_15</filename>
+  <path>/home/ubuntu/third_party_ros2/data/JPEGImages/image_15.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>640</width>
+    <height>480</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <type>bndbox</type>
+    <name>orange</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>297</xmin>
+      <ymin>178</ymin>
+      <xmax>513</xmax>
+      <ymax>385</ymax>
+    </bndbox>
+  </object>
+</annotation>
