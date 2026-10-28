@@ -54,8 +54,7 @@ runs/
 **/runs/
 
 # Platform-specific compiled libraries/binaries. Rebuild from source for target platform.
-*.so
-*.so.*
+
 *.a
 *.lib
 *.o

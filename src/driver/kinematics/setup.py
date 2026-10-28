@@ -14,7 +14,8 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*.*'))),
-    ],    install_requires=['setuptools'],
+        (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
+    ],    install_requires=['setuptools', 'numpy', 'PyYAML'],
     zip_safe=True,
     maintainer='ubuntu',
     maintainer_email='1270161395@qq.com',
@@ -23,6 +24,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'kinematics_jog = kinematics.jog_cli:main',
+            'python_kinematics = kinematics.python_kinematics_node:main',
             'search_kinematics_solutions = kinematics.search_kinematics_solutions_node:main',
         ],
     },

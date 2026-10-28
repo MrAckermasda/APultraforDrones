@@ -34,9 +34,24 @@ ros2 run peripherals gamepad_monitor
 
 关节 jog 的 `joint_step` 与 `joint_duration` 可运行时调整；GUI 和日志中需区分用户输入、目标值、发送命令及上层命令缓存。`servo_states` 不等同于持续实测舵机反馈。
 
-## Python FK/IK 原型状态
+## Python FK/IK 与可选 ROS 后端
 
-`src/driver/kinematics/kinematics/python_kinematics.py` 和 `scripts/preview_kinematics.py` 提供纯 Python 离线几何计算与数值测试。它尚未完成对实机连杆尺寸、零位、坐标系、工具偏置和原厂实现的校准，**不应作为已验证的在线控制后端，也不会自动把 IK 解发送给机械臂**。原始 ARM 架构 `.so` 不适用于 x86_64；仓库忽略预编译共享库。详见 `docs/Python_FK_IK离线实现与验证.md`。
+纯 Python FK/IK 已增加可独立部署的 ROS 2 服务后端，无需加载 ARM 专用 `.so`。它读取总线舵机实测位置，检查反馈时效、整数脉宽和轨迹完整性；默认节点为 `/kinematics_python`，IK 输出关闭，不发布运动命令。构建后可运行：
+
+```bash
+source scripts/setup_pc.bash
+ros2 launch kinematics python_kinematics.launch.py
+```
+
+本机已通过模拟总线 ROS 服务联调，但实机几何、零位、工具偏置与方向尚待测量校准。部署参数、实测比对工具与启用步骤见 [Python FK/IK 部署与标定](docs/Python_FK_IK部署与标定.md)；离线模型推导与示例见 [离线实现与验证](docs/Python_FK_IK离线实现与验证.md)。
+
+实物几何核对后，可用新工具做真实关节反馈驱动的小步验证，默认仅预览：
+
+```bash
+ros2 run kinematics kinematics_jog --delta-mm 0 0 3 --duration 2
+```
+
+需要已运行的底层控制板服务；加 `--execute` 才发送动作。分段运动、回读、故障停止和现场操作步骤见 [FK/IK 实机小步验证](docs/FK_IK实机小步验证.md)。本轮仅完成模拟总线验证，未实际驱动机械臂。
 
 ## 可选模型/大文件
 

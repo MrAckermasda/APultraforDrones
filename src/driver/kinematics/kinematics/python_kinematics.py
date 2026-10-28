@@ -1,8 +1,8 @@
-"""Experimental, offline ArmPi Ultra FK/IK from transform.py's Modified DH table.
+"""ArmPi Ultra FK/IK from transform.py's Modified DH table.
 
 This module is explicitly separate from the vendor .so modules. It neither
 imports ROS nor publishes commands. Tool +Z and pitch conventions are hypotheses
-to verify against the vendor runtime/physical arm before any control integration.
+to verify against the vendor runtime/physical arm before enabling pose targets in the optional ROS backend.
 Lengths: metres; joints: radians; geometric tool pitch: degrees.
 """
 from dataclasses import dataclass
@@ -122,8 +122,13 @@ class ArmKinematics:
     q1..q5 correspond to servo IDs 6,5,4,3,2. ID 1 is gripper opening.
     IK constrains XYZ + geometric tool pitch + chosen q5, not arbitrary 6D pose.
     """
-    def __init__(self, geometry=None, joint_limits_deg=NOMINAL_LIMITS_DEG):
+    def __init__(self, geometry=None, joint_limits_deg=NOMINAL_LIMITS_DEG,
+                 zero_pulses=(500., 500., 500., 500., 500.)):
         self.geometry = geometry if geometry is not None else ArmGeometry()
+        self.zero_pulses = _vector(zero_pulses, 5, "zero_pulses").copy()
+        if np.any(self.zero_pulses < 0) or np.any(self.zero_pulses > 1000):
+            raise ValueError("zero_pulses must be within [0,1000]")
+        self.zero_pulses.setflags(write=False)
         limits = np.asarray(joint_limits_deg, dtype=float)
         if limits.shape != (5, 2) or not np.all(np.isfinite(limits)) or np.any(
                 limits[:, 0] > limits[:, 1]) or np.any(limits[:, 1] - limits[:, 0] > 360):
@@ -141,7 +146,7 @@ class ArmKinematics:
         p = _vector(pulses, 5, 'pulses in ID order 6,5,4,3,2')
         if np.any(p < 0) or np.any(p > 1000):
             raise ValueError('Pulse values must be in [0,1000]')
-        degrees = (p - 500) * np.array([0.24, -0.24, 0.24, -0.24, 0.24])
+        degrees = (p - self.zero_pulses) * np.array([0.24, -0.24, 0.24, -0.24, 0.24])
         degrees[[1, 3]] -= 90
         return self._joints(np.radians(degrees))
 
@@ -149,7 +154,7 @@ class ArmKinematics:
         """Float pulses only; no rounding/clipping or command publishing."""
         degrees = np.degrees(self._joints(angles)).copy()
         degrees[[1, 3]] += 90
-        p = degrees / np.array([0.24, -0.24, 0.24, -0.24, 0.24]) + 500
+        p = degrees / np.array([0.24, -0.24, 0.24, -0.24, 0.24]) + self.zero_pulses
         if np.any(p < -1e-8) or np.any(p > 1000 + 1e-8):
             raise ValueError('Solution cannot be represented within [0,1000] pulses')
         return p

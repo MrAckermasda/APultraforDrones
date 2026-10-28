@@ -1,0 +1,20 @@
+# Nominal model only: measure geometry and zero positions before enabling IK.
+# base_height defaults from CHASSIS_TYPE (Slide_Rails: 0.162, otherwise 0.094605 m).
+/**:
+  ros__parameters:
+    enable_pose_targets: false
+    upper_arm: 0.10048
+    forearm: 0.100
+    wrist_length: 0.055
+    gripper_length: 0.115
+    zero_pulses: [500.0, 500.0, 500.0, 500.0, 500.0]
+    joint_limits_deg: [-120.0, 120.0, -180.0, 0.0, -120.0, 120.0, -200.0, 20.0, -120.0, 120.0]
+    feedback_service: /ros_robot_controller/bus_servo/get_state
+    feedback_timeout: 1.0
+    feedback_period: 0.2
+    position_tolerance: 0.002
+    pitch_tolerance: 0.5
+    max_velocity: 250.0
+    max_acceleration: 5000.0
+    max_samples: 501
+    trajectory_dt: 0.02
